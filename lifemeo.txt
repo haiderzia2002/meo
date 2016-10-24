@@ -1,0 +1,74 @@
+/* meo Player *
+ *   v1.7.0   *
+ *   LGPLv3   */
+Changelog
+	v1.7.0 - Reworked time float and time boxes for better font compatibility
+	250916 - Reworked structure
+	       - Cleaned up some code
+	       - Changed tested compatibility
+
+	v1.6.0 - Switched to LGPLv3 license
+	140916 - Moved functions under $.fn.meo
+	       - Switched back to old controlbar handling
+	       - Fixed index size error
+
+	v1.5.0 - Basic Fallback
+	310816 - Switched event handlers to on()
+	       - Fullscreen is smaller
+	       - Moved unneccesary styling from js to css
+	       - Made calculating width of controlbar more efficient
+	       - Specified colour of text
+
+	v1.4.0 - Loaded bar
+	270816 - Fix alignment of time relative to everything else on some fonts
+	       - Reworked a bit of styling for the time float and progress bar
+
+	v1.3.0 - Keyboard + Accessibility controls
+	260816 - Made finding video duration less complicated
+	       - Made controlbar hide on click
+
+	v1.2.2 - Made fullscreen more efficient and more compact
+	040816 - Play button now changes icon depending on firing of events directly from the <video>/<audio> instead of clicking the button
+	       - Trimmed some code off time float
+
+	v1.2.1 - Fixed bug in which timestamp in MM:SS format would display incorrectly
+	280716 - Fixed bug in which controls are not sized correctly
+	       - Fixed incorrect Mozilla vendor prefix for fullscreenElement to allow fullscreen to work on Firefox <48
+
+	v1.2.0 - HH:MM:SS Timestamp support
+	270716 - Fixed bug in which time float does not hide if you keep your mouse on it, even after taking it off the progress bar
+
+	v1.1.0 - Time float
+	230716 - Fixed minor graphical bug
+
+	v1.0.0 - Initial release
+	220716 - <video> support
+	       - Basic controls
+	       - Fullscreen support
+	       - Package as jQuery plugin
+	       - <audio> support
+
+Roadmap
+	v1.8.0 - Captions/Subtitles
+	v1.9.0 - Play speed slider
+	v1.10.0 - Playlists
+	v1.11.0 - Allow optional plugin fallback
+	v1.12.0 - Loop button
+
+Notes
+	1) By Haider
+	2) GNU LGPLv3 license
+	3) jQuery dependance
+	4) Fast release cycle
+
+Compatibility
+	Internet Explorer (11+)
+	MS Edge (Latest)
+	Safari (Latest)
+	Firefox (Latest)
+	Chrome/Opera (Latest)
+
+	Android Firefox (Latest)
+	Android Chrome (Latest)
+
+Bugs

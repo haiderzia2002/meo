@@ -1,0 +1,144 @@
+/* meo Player *
+ *   v1.7.0   *
+ *   LGPLv3   */
+video
+{
+	background: rgb(0, 0, 0);
+}
+
+audio
+{
+	width: 18em;
+}
+
+.meo
+{
+	display: table;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.meo video, .meo audio
+{
+	display: block;
+	outline: none;
+}
+
+.meo video ~ ul
+{
+	position: absolute;
+	bottom: 0;
+}
+
+.meo audio ~ ul .fs
+{
+	width: 0;
+	margin: 0;
+}
+
+.meo ul
+{
+	font-family: "Helvetica Neue", "Helvetica", "Arial", "Roboto", "Droid Sans", "Liberation Sans", "Nimbus Sans L", "Nimbus Sans", sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 2em;
+	width: 100%;
+	list-style: none;
+	background: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	outline: none;
+	display: inline-block;
+}
+
+.meo ul li
+{
+	margin: 0.5em;
+	padding: 0;
+	height: 1em;
+	width: 1em;
+	background: url("controls.svg");
+	background-size: 200%;
+	float: left;
+}
+
+.meo .ctime, .meo .ttime
+{
+	width: auto;
+	background: none;
+	margin: 0 0.5em;
+	line-height: 2em;
+	height: 2em;
+}
+
+.meo .progr
+{
+	margin: 0.6875em;
+	height: 0.625em;
+	background: rgb(200, 0, 0);
+	position: relative;
+}
+
+.meo .progr *
+{
+	height: 0.625em;
+	position: absolute;
+}
+
+.meo .progr .progb
+{
+	background: rgb(255, 255, 255);
+}
+
+.meo .progr .progl
+{
+	background: rgb(255, 0, 0);
+}
+
+.meo .progr .ftime, .meo .progr .ftimt
+{
+	visibility: hidden;
+}
+
+.meo .progr .ftime
+{
+	padding: 0 0.25em;
+	height: 1.25em;
+	top: -1.9375em;
+	background: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}
+
+.meo .progr .ftimt
+{
+	width: 0;
+	height: 0;
+	border-left: 0.6875em solid transparent;
+	border-right: 0.6875em solid transparent;
+	border-top: 0.6875em solid #fff;
+	top: -0.6875em;
+}
+
+.meofs, .meofs video
+{
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.meofs ul
+{
+	position: absolute;
+	bottom: 0;
+}
+
+.nomed
+{
+	background: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	width: 18em;
+	text-align: left;
+	border: 0.0625em solid #fff;
+}
