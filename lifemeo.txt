@@ -1,7 +1,18 @@
-/* meo Player *
- *   v1.7.0   *
- *   LGPLv3   */
+/* meo media Player *
+ * v2.0.0 || LGPLv3 *
+ * by haiderzia2002 */
 Changelog
+    v2.0.0 - Options (override time format used, change time taken for controlbar to hide, force fallback, etc)
+	280217 - HH:MM:SS bug, where video over 1 hour long would still use MM:SS format
+           - Width of controls responds to change in width of time progress
+           - New and improved mouse activity detection method for hiding controls
+           - Full iOS support
+           - Removed unnecessary variable declaration on fullscreenchange
+           - Added more keyboard shortcuts (skip ahead)
+           - Fixed broken fallback (changed variable name, but forgot to change in some places)
+           - Fixed fullscreen controls not working on Chrome
+		   - Fixed broken loading bar
+
 	v1.7.0 - Reworked time float and time boxes for better font compatibility
 	250916 - Reworked structure
 	       - Cleaned up some code
@@ -49,20 +60,20 @@ Changelog
 	       - <audio> support
 
 Roadmap
-	v1.8.0 - Captions/Subtitles
-	v1.9.0 - Play speed slider
-	v1.10.0 - Playlists
-	v1.11.0 - Allow optional plugin fallback
-	v1.12.0 - Loop button
+	v2.1.0 - Captions/Subtitles
+	v2.2.0 - Play speed slider
+	v2.3.0 - Playlists
+	v2.4.0 - Allow optional plugin fallback
+	v2.5.0 - Loop button
 
 Notes
 	1) By Haider
 	2) GNU LGPLv3 license
 	3) jQuery dependance
-	4) Fast release cycle
+	4) Always remember to give credit if you use the project or any code from it
 
 Compatibility
-	Internet Explorer (11+)
+	Internet Explorer (Latest)
 	MS Edge (Latest)
 	Safari (Latest)
 	Firefox (Latest)
@@ -70,5 +81,6 @@ Compatibility
 
 	Android Firefox (Latest)
 	Android Chrome (Latest)
+    iOS (Latest)
 
 Bugs

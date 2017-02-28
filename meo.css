@@ -1,6 +1,6 @@
-/* meo Player *
- *   v1.7.0   *
- *   LGPLv3   */
+/* meo media Player *
+ * v2.0.0 || LGPLv3 *
+ * by haiderzia2002 */
 video
 {
 	background: rgb(0, 0, 0);
@@ -50,6 +50,11 @@ audio
 	color: rgb(255, 255, 255);
 	outline: none;
 	display: inline-block;
+}
+
+.meo .hidec
+{
+    visibility: hidden;
 }
 
 .meo ul li
