@@ -1,0 +1,198 @@
+body
+{
+	background: rgb(0, 0, 55);
+	color: rgb(255, 255, 255);
+	font-family: "Rosario", "Helvetica Neue", "Helvetica", "Arial", "Roboto", "Liberation Sans", "Liberation Sans Narrow", "Nimbus Sans L", "Nimbus Sans", sans-serif;
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+a
+{
+    color: rgb(255, 255, 255);
+}
+
+a:hover
+{
+	color: rgb(255, 0, 0);
+}
+
+h1
+{
+    text-align: center;
+	text-decoration: underline;
+}
+
+header
+{
+	background: rgb(255, 255, 255);
+}
+
+main
+{
+	margin: 0.5em;
+}
+
+.logo
+{
+	height: 5em;
+	width: 5em;
+	background: url("meo.svg") no-repeat center;
+	background-size: 80%;
+	margin: 0 auto;
+}
+
+table
+{
+    border: 0;
+    border-spacing: 0;
+}
+
+td, th
+{
+    padding: 1em;
+}
+
+nav
+{
+	text-align: center;
+}
+
+nav > ul /* Hide menu */
+{
+	display: none;
+}
+
+#nop:target + a + ul /* Open menu */
+{
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+nav ul li:hover, nav > a:hover
+{
+	background: rgb(255,255,255);
+}
+
+nav ul li:hover > a, nav > a:hover
+{
+	color: rgb(255,0,0);
+}
+
+nav ul li /* Menu items */
+{
+	display: block;
+	height: auto;
+	line-height: 5em;
+	background: rgb(255,0,0);
+	text-align: left;
+	padding: 0 0 0 3em;
+}
+
+nav ul ul li /* Hide 2nd level menu - Accessibility */
+{
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+}
+
+nav ul li:hover > ul li /* Show menu items */
+{
+	position: static;
+}
+
+nav ul li a
+{
+	color: rgb(255,255,255);
+	text-decoration: none;
+}
+
+#nop, #nop:target + #ncl
+{
+	display: block;
+}
+
+#nop:target, #ncl
+{
+	display: none;
+}
+
+nav > a
+{
+	display: inline-block;
+	font-size: 4em;
+	line-height: 1.25em;
+	text-align: center;
+	height: 1.25em;
+	width: 1.25em;
+	margin: -1.25em 0 0 0;
+	float: right;
+	text-decoration: none;
+}
+
+#nop
+{
+	background: rgb(255,0,0);
+	color: rgb(255,255,255);
+}
+
+#ncl
+{
+	background: rgb(255,255,255);
+	color: rgb(255,0,0);
+}
+
+nav ul ul:before
+{
+	content: "+";
+	padding: 0 3em 0 0;
+	margin: -5em 0 0 0;
+	float: right;
+}
+
+nav ul ul:hover:before, nav ul li:hover ul:before
+{
+	color: rgb(255,0,0);
+	background: rgb(255,255,255);
+}
+
+#browsersupport tr:nth-child(even) td:nth-child(odd),
+#browsersupport tr:nth-child(odd) td:nth-child(even),
+#browsersupport tr:nth-child(even) th:nth-child(odd),
+#browsersupport tr:nth-child(odd) th:nth-child(even)
+{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+#browsersupport tr:nth-child(even) td:nth-child(even),
+#browsersupport tr:nth-child(odd) td:nth-child(odd),
+#browsersupport tr:nth-child(even) th:nth-child(even),
+#browsersupport tr:nth-child(odd) th:nth-child(odd)
+{
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+#demo > div
+{
+	width: 100%;
+	overflow: auto;
+}
+
+#usage div
+{
+	padding: 1em 2em;
+	background: rgb(150, 150, 150);
+	font-family: 'Courier New';
+	line-height: 1em;
+}
+
+#usage ol li
+{
+	line-height: 1.5em;
+}
