@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>meo Media Player</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+<meta name="msapplication-TileColor" content="#f00">
+<meta name="msapplication-TileImage" content="meo.png">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="meo.js"></script>
+<link rel="stylesheet" type="text/css" href="meo.css">
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="apple-touch-icon-precomposed" href="meo.png">
+<link rel="icon" href="favicon.ico">
+<script>
+$(document).ready(function() {
+	$("video, audio").meo();
+});
+</script>
+</head>
+<body>
+<header>
+	<div class="logo"></div>
+	<nav>
+		<a id="nop" href="#nop">&#x2261;</a>
+		<a id="ncl" href="#">&#x2261;</a>
+		<ul>
+			<li><a href="#features">Features</a></li>
+			<li><a href="#browsersupport">Browser Support</a></li>
+			<li><a href="#demo">Demo</a></li>
+			<li><a href="#usage">Usage</a></li>
+			<li><a href="#nop">GitHub</a>
+				<ul>
+					<li><a href="https://github.com/haiderzia2002/meo">Repository</a></li>
+					<li><a href="https://github.com/haiderzia2002/meo/issues">Report Bug/Feature request</a></li>
+					<li><a href="https://github.com/haiderzia2002">Creator's GitHub</a></li>
+					<li><a href="https://github.com/haiderzia2002/meo/releases">Download</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<h1><a href="https://github.com/haiderzia2002/meo">meo Media Player</a></h1>
+	<p>meo is a HTML5 &#60;video&#62;/&#60;audio&#62; that focuses on efficiency, customisability and functionality.</p>
+	<div id="features">
+		<h2>Features</h2>
+		<ul>
+			<li>Skins</li>
+			<li>Progress bar</li>
+			<li>Loading bar</li>
+			<li>Time float</li>
+			<li>Fullscreen</li>
+			<li>Fallback</li>
+			<li>Keyboard controls</li>
+			<li>Controls auto-hide</li>
+			<li>jQuery required</li>
+		</ul>
+	</div>
+	<div id="browsersupport">
+		<h2>Browser support</h2>
+		<table>
+			<tr>
+				<th>Desktop</th>
+				<th>Mobile</th>
+			</tr>
+			<tr>
+				<td>Internet Explorer (11+)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Edge (Latest)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Safari (Latest)</td>
+				<td>iOS (Latest)</td>
+			</tr>
+			<tr>
+				<td>Firefox (Latest)</td>
+				<td>Android Firefox (Latest)</td>
+			</tr>
+			<tr>
+				<td>Chrome/Opera (Latest)</td>
+				<td>Android Chrome (Latest)</td>
+			</tr>
+		</table>
+	</div>
+	<div id="demo">
+		<h2>Demo</h2>
+		<div>
+			<video>
+				<source src="cloud.webm">
+				<source src="cloud.mp4">
+			</video>
+			<audio src="audio.mp3" controls></audio>
+		</div>
+	</div>
+	<div id="usage">
+		<h2>Usage</h2>
+		<ol>
+			<li><a href="https://github.com/haiderzia2002/meo/releases">Download meo</a></li>
+			<li>Add CSS and JS to &lt;head&gt;.
+				<div>
+					&#60;script src="path/to/meo.js"&#62;&#60;/script&#62;<br>
+					&#60;link rel="stylesheet" type="text/css" href="path/to/meo.css"&#62;
+				</div>
+			</li>
+			<li>Add this to your JavaScript. Where "video, audio" is, replace with the identifier for one or more &lt;video&gt;/&lt;audio&gt; elements.
+				<div>
+					$("video, audio").meo()
+				</div>
+			</li>
+			<li>Optionally configure according to the guidelines below.
+				<div>
+					$("video, audio").meo({<br>
+						timeFormat: "default", // This sets the format that the time is displayed in. Choose "hhmmss", "mmss" or "default"<br>
+						hideTime: "2000", // Time it should take for controlbar to hide after mouse inactivity in milliseconds<br>
+						skip: "5" // Number of seconds the keyboard shortcuts (ArrowLeft, j, l and ArrowRight) should move<br>
+					});
+				</div>
+			</li>
+		</ol>
+	</div>
+</main>
+</body>
+</html>
