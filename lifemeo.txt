@@ -1,17 +1,25 @@
 /* meo media Player *
- * v2.0.0 || LGPLv3 *
+ * v2.0.1 || LGPLv3 *
  * by haiderzia2002 */
 Changelog
-    v2.0.0 - Options (override time format used, change time taken for controlbar to hide, force fallback, etc)
+	v2.0.1 - Fixed visual bug on play/pause button on iOS Safari
+	080617 - Fixed broken loading bar (again)
+	       - Fixed ArrowRight not being used as a keyboard shortcut
+	       - Fixed IE11 Fullscreen not working correctly
+	       - Fixed fallback not working
+	       - Removed some useless CSS
+	       - Annotated the CSS
+
+	v2.0.0 - Options (override time format used, change time taken for controlbar to hide, force fallback, etc)
 	280217 - HH:MM:SS bug, where video over 1 hour long would still use MM:SS format
-           - Width of controls responds to change in width of time progress
-           - New and improved mouse activity detection method for hiding controls
-           - Full iOS support
-           - Removed unnecessary variable declaration on fullscreenchange
-           - Added more keyboard shortcuts (skip ahead)
-           - Fixed broken fallback (changed variable name, but forgot to change in some places)
-           - Fixed fullscreen controls not working on Chrome
-		   - Fixed broken loading bar
+	       - Width of controls responds to change in width of time progress
+	       - New and improved mouse activity detection method for hiding controls
+	       - Full iOS support
+	       - Removed unnecessary variable declaration on fullscreenchange
+	       - Added more keyboard shortcuts (skip ahead)
+	       - Fixed broken fallback (changed variable name, but forgot to change in some places)
+	       - Fixed fullscreen controls not working on Chrome
+	       - Fixed broken loading bar
 
 	v1.7.0 - Reworked time float and time boxes for better font compatibility
 	250916 - Reworked structure

@@ -1,17 +1,17 @@
 /* meo media Player *
- * v2.0.0 || LGPLv3 *
+ * v2.0.1 || LGPLv3 *
  * by haiderzia2002 */
-video
+video /* Prevent white bars next to <video>*/
 {
 	background: rgb(0, 0, 0);
 }
 
-audio
+audio /* Default <audio> controlbar width */
 {
 	width: 18em;
 }
 
-.meo
+.meo /* Style container */
 {
 	display: table;
 	font-size: 100%;
@@ -20,25 +20,25 @@ audio
 	position: relative;
 }
 
-.meo video, .meo audio
+.meo video, .meo audio /* Reset <video>/<audio> elements */
 {
 	display: block;
 	outline: none;
 }
 
-.meo video ~ ul
+.meo video ~ ul /* Position controlbar at bottom of <video> element */
 {
 	position: absolute;
 	bottom: 0;
 }
 
-.meo audio ~ ul .fs
+.meo audio ~ ul .fs /* Hide fullscreen button on <audio> elements */
 {
 	width: 0;
 	margin: 0;
 }
 
-.meo ul
+.meo ul /* Style background behind controls */
 {
 	font-family: "Helvetica Neue", "Helvetica", "Arial", "Roboto", "Droid Sans", "Liberation Sans", "Nimbus Sans L", "Nimbus Sans", sans-serif;
 	margin: 0;
@@ -52,23 +52,22 @@ audio
 	display: inline-block;
 }
 
-.meo .hidec
+.meo .hidec /* Hide controls */
 {
     visibility: hidden;
 }
 
-.meo ul li
+.meo ul li /* Style controls */
 {
 	margin: 0.5em;
 	padding: 0;
 	height: 1em;
 	width: 1em;
 	background: url("controls.svg");
-	background-size: 200%;
 	float: left;
 }
 
-.meo .ctime, .meo .ttime
+.meo .ctime, .meo .ttime /* Style current time and total time */
 {
 	width: auto;
 	background: none;
@@ -77,7 +76,7 @@ audio
 	height: 2em;
 }
 
-.meo .progr
+.meo .progr /* Style progress and loading bar, as well as time float (triangle) */
 {
 	margin: 0.6875em;
 	height: 0.625em;
@@ -85,28 +84,28 @@ audio
 	position: relative;
 }
 
-.meo .progr *
+.meo .progr * /* Position progress, loading bar and time float relative to time bar */
 {
 	height: 0.625em;
 	position: absolute;
 }
 
-.meo .progr .progb
+.meo .progr .progb /* Progress bar */
 {
 	background: rgb(255, 255, 255);
 }
 
-.meo .progr .progl
+.meo .progr .progl /* Loading bar */
 {
 	background: rgb(255, 0, 0);
 }
 
-.meo .progr .ftime, .meo .progr .ftimt
+.meo .progr .ftime, .meo .progr .ftimt /* Hide time float and time float triangle */
 {
 	visibility: hidden;
 }
 
-.meo .progr .ftime
+.meo .progr .ftime /* Time float */
 {
 	padding: 0 0.25em;
 	height: 1.25em;
@@ -115,7 +114,7 @@ audio
 	color: rgb(0, 0, 0);
 }
 
-.meo .progr .ftimt
+.meo .progr .ftimt /* Time float triangle */
 {
 	width: 0;
 	height: 0;
@@ -125,7 +124,7 @@ audio
 	top: -0.6875em;
 }
 
-.meofs, .meofs video
+.meofs, .meofs video /* Fullscreen */
 {
 	display: block;
 	height: 100%;
@@ -133,13 +132,7 @@ audio
 	position: relative;
 }
 
-.meofs ul
-{
-	position: absolute;
-	bottom: 0;
-}
-
-.nomed
+.nomed /* Fallback */
 {
 	background: rgb(0, 0, 0);
 	color: rgb(255, 255, 255);
