@@ -1,5 +1,5 @@
 /* meo media Player *
- * v2.0.0 || LGPLv3 *
+ * v2.0.1 || LGPLv3 *
  * by haiderzia2002 */
 $(document).ready(function() {
 	$.fn.meo = function(options) {
@@ -35,19 +35,18 @@ $(document).ready(function() {
 		};
 
 		// Test whether to use fallback
-		var meot1 = document.createElement("video").canPlayType;
 		return this.each(function() {
 			var med = $(this),
 			    men = this;
 			med.wrap('<div class="meo"></div>');
 			var meocn = med.parent();
-			if (meot1) {
+			if (document.createElement("video").canPlayType !== undefined) {
 				// Insert controls and disable browser default controls
 				med.after('<ul tabindex="-1"><li class="playp"></li><li class="ctime"></li><li class="progr"><div class="progl"></div><div class="progb"></div><div class="ftime"></div><div class="ftimt"></div></li><li class="ttime"></li><li class="fs"></li></ul>');
 				this.controls = false;
 				// Enable video on iOS 10 iPhone to play without going into fullscreen
 				med.attr("playsinline", "true");
-				
+
 				// Declare variables
 				var meoul = med.siblings(),
 				    playp = meoul.find(".playp"), // play/pause button
@@ -67,7 +66,6 @@ $(document).ready(function() {
 					med.on("loadeddata", function() {
 						var conwidth = playp.outerWidth(true) + ctime.outerWidth(true) + progr.outerWidth(true) - progr.outerWidth(false) + ttime.outerWidth(true) + fs.outerWidth(true);
 						progr.css("width", med.width() - conwidth);
-						progl.width(((this.buffered.end(0) / this.duration) * 100) + "%");
 					});
 				});
 
@@ -77,6 +75,7 @@ $(document).ready(function() {
 					progb.width(((this.currentTime / this.duration) * 100) + "%");
 					ctime.text(med.time(this.currentTime));
 					progr.css("width", med.width() - conwidth);
+					progl.width(((men.buffered.end(men.buffered.length - 1) / men.duration) * 100) + "%");
 				});
 
 				// Handles changing icon on play/pause button
@@ -123,7 +122,7 @@ $(document).ready(function() {
 						meocn.find("video, audio").handlePlay();
 					} else if (e.which == 37 || e.which == 74) { // ArrowLeft || j
 						men.currentTime -= settings.skip;
-					} else if (e.which == 32 || e.which == 76) { // ArrowRight || l
+					} else if (e.which == 39 || e.which == 76) { // ArrowRight || l
 						men.currentTime -= -1 * settings.skip;
 					};
 				});
@@ -158,7 +157,7 @@ $(document).ready(function() {
 						};
 					});
 
-					$(document).on("fullscreenchange webkitfullscreenchange mozfullscreenchange msfullscreenchange", function() {
+					$(document).on("fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange", function() {
 						var conwidth = playp.outerWidth(true) + ctime.outerWidth(true) + (progr.outerWidth(true) - progr.outerWidth(false)) + ttime.outerWidth(true) + fs.outerWidth(true);
 						if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
 							meocn.addClass("meofs");
