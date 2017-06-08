@@ -10,7 +10,7 @@ body
 
 a
 {
-    color: rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
 }
 
 a:hover
@@ -20,8 +20,14 @@ a:hover
 
 h1
 {
-    text-align: center;
+	text-align: center;
 	text-decoration: underline;
+	margin-bottom: 0;
+}
+
+h1 + h3
+{
+	margin-top: 0;
 }
 
 header
@@ -45,13 +51,13 @@ main
 
 table
 {
-    border: 0;
-    border-spacing: 0;
+	border: 0;
+	border-spacing: 0;
 }
 
 td, th
 {
-    padding: 1em;
+	padding: 1em;
 }
 
 nav
@@ -165,8 +171,8 @@ nav ul ul:hover:before, nav ul li:hover ul:before
 #browsersupport tr:nth-child(even) th:nth-child(odd),
 #browsersupport tr:nth-child(odd) th:nth-child(even)
 {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+	background: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
 }
 
 #browsersupport tr:nth-child(even) td:nth-child(even),
@@ -174,8 +180,8 @@ nav ul ul:hover:before, nav ul li:hover ul:before
 #browsersupport tr:nth-child(even) th:nth-child(even),
 #browsersupport tr:nth-child(odd) th:nth-child(odd)
 {
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+	background: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 }
 
 #demo > div
