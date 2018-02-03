@@ -1,7 +1,14 @@
 /* meo media Player *
- * v2.0.1 || LGPLv3 *
+ * v2.0.2 || LGPLv3 *
  * by haiderzia2002 */
 Changelog
+	v2.0.2 - Cleaned up and made code more efficient
+	020218 - Removed need for ftimt by bring back previous pseudo-element method of adding pointer
+				 - Visibility of time float handled through CSS only again
+				 - Converted colours to hexadecimal
+				 - Fixed Chrome and IE11 keyboard controls
+				 - Made properties accessible externally through array
+
 	v2.0.1 - Fixed visual bug on play/pause button on iOS Safari
 	080617 - Fixed broken loading bar (again)
 	       - Fixed ArrowRight not being used as a keyboard shortcut
@@ -68,11 +75,8 @@ Changelog
 	       - <audio> support
 
 Roadmap
-	v2.1.0 - Captions/Subtitles
-	v2.2.0 - Play speed slider
-	v2.3.0 - Playlists
-	v2.4.0 - Allow optional plugin fallback
-	v2.5.0 - Loop button
+	v2.1.0 - Volume sliider
+	v2.2.0 - Captions/Subtitles
 
 Notes
 	1) By Haider
@@ -89,6 +93,6 @@ Compatibility
 
 	Android Firefox (Latest)
 	Android Chrome (Latest)
-    iOS (Latest)
+	iOS (Latest)
 
 Bugs
