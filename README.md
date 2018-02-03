@@ -14,7 +14,7 @@ HTML5 &lt;video>/&lt;audio> player that focuses on efficiency, customisability a
 
 # Browser support
 * Desktop
-  * Internet Explorer (11+)
+  * Internet Explorer (Latest)
   * Edge (Latest)
   * Safari (Latest)
   * Firefox (Latest)

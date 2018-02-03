@@ -1,9 +1,9 @@
 /* meo media Player *
- * v2.0.1 || LGPLv3 *
+ * v2.0.2 || LGPLv3 *
  * by haiderzia2002 */
 video /* Prevent white bars next to <video>*/
 {
-	background: rgb(0, 0, 0);
+	background: #000;
 }
 
 audio /* Default <audio> controlbar width */
@@ -18,6 +18,7 @@ audio /* Default <audio> controlbar width */
 	margin: 0;
 	padding: 0;
 	position: relative;
+	outline: none;
 }
 
 .meo video, .meo audio /* Reset <video>/<audio> elements */
@@ -40,21 +41,16 @@ audio /* Default <audio> controlbar width */
 
 .meo ul /* Style background behind controls */
 {
-	font-family: "Helvetica Neue", "Helvetica", "Arial", "Roboto", "Droid Sans", "Liberation Sans", "Nimbus Sans L", "Nimbus Sans", sans-serif;
+	font-family: "Helvetica", "Arial", "Roboto", "Liberation Sans", sans-serif;
 	margin: 0;
 	padding: 0;
 	height: 2em;
 	width: 100%;
 	list-style: none;
-	background: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
+	background: #000;
+	color: #fff;
 	outline: none;
 	display: inline-block;
-}
-
-.meo .hidec /* Hide controls */
-{
-    visibility: hidden;
 }
 
 .meo ul li /* Style controls */
@@ -76,11 +72,11 @@ audio /* Default <audio> controlbar width */
 	height: 2em;
 }
 
-.meo .progr /* Style progress and loading bar, as well as time float (triangle) */
+.meo .progr /* Style progress and loading bar, as well as time float */
 {
 	margin: 0.6875em;
 	height: 0.625em;
-	background: rgb(200, 0, 0);
+	background: #d00;
 	position: relative;
 }
 
@@ -92,17 +88,22 @@ audio /* Default <audio> controlbar width */
 
 .meo .progr .progb /* Progress bar */
 {
-	background: rgb(255, 255, 255);
+	background: #fff;
 }
 
 .meo .progr .progl /* Loading bar */
 {
-	background: rgb(255, 0, 0);
+	background: #f00;
 }
 
-.meo .progr .ftime, .meo .progr .ftimt /* Hide time float and time float triangle */
+.meo .progr .ftime, .meo .hidec /* Hide time float */
 {
 	visibility: hidden;
+}
+
+.meo .progr:hover > .ftime
+{
+	visibility: visible;
 }
 
 .meo .progr .ftime /* Time float */
@@ -110,18 +111,22 @@ audio /* Default <audio> controlbar width */
 	padding: 0 0.25em;
 	height: 1.25em;
 	top: -1.9375em;
-	background: rgb(255, 255, 255);
-	color: rgb(0, 0, 0);
+	background: #fff;
+	color: #000;
 }
 
-.meo .progr .ftimt /* Time float triangle */
+.meo .progr .ftime:after /* Time float triangle */
 {
+	content: "";
 	width: 0;
 	height: 0;
 	border-left: 0.6875em solid transparent;
 	border-right: 0.6875em solid transparent;
 	border-top: 0.6875em solid #fff;
-	top: -0.6875em;
+	position: relative;
+	display: block;
+	left: 50%;
+	margin-left: -0.6875em;
 }
 
 .meofs, .meofs video /* Fullscreen */
@@ -134,9 +139,14 @@ audio /* Default <audio> controlbar width */
 
 .nomed /* Fallback */
 {
-	background: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
+	background: #000;
+	color: #fff;
 	width: 18em;
 	text-align: left;
 	border: 0.0625em solid #fff;
+}
+
+.nomed a
+{
+	display: inline-block;
 }
